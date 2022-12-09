@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             var go = new HighLowRandom();
+            
 
             go.WelcomeMessage();
+            go.CalculateGuess(InputHandler.TakeInput());
 
             
             
