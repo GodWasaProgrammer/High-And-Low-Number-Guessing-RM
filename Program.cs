@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-           var go = new HighLowRandom();
+            var go = new HighLowRandom();
 
             go.WelcomeMessage();
-            do
-            {
-                go.CalculateGuess(Int32.Parse(Console.ReadLine()));
-            } while(go.MySecretNumber != YourGuess)
+
+            
+            
+
         }
     }
 }
