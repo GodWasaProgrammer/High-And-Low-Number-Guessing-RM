@@ -7,8 +7,10 @@
            var go = new HighLowRandom();
 
             go.WelcomeMessage();
-
-            
+            do
+            {
+                go.CalculateGuess(Int32.Parse(Console.ReadLine()));
+            } while(go.MySecretNumber != YourGuess)
         }
     }
 }

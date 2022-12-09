@@ -22,6 +22,7 @@ namespace High_And_Low_Number_Guessing_RM
 
         public void CalculateGuess(int Guess)
         {
+            do { 
             if (Guess == MySecretNumber)
             {
                 Console.WriteLine("You Guessed the secret number!");
@@ -34,7 +35,8 @@ namespace High_And_Low_Number_Guessing_RM
             {
                 Console.WriteLine("You were 5 or less number away!");
             }
-
+            }
+            while (Guess != MySecretNumber);
 
         }
 
