@@ -29,20 +29,21 @@ namespace High_And_Low_Number_Guessing_RM
                 Console.WriteLine("Thats one in a hundred! Amazing!");
 
             }
+            if(Guess != MySecretNumber) 
+            {
+                Console.WriteLine("Your guess was not correct");
 
             if (Guess == MySecretNumber + 1 || Guess == MySecretNumber + 2 || Guess == MySecretNumber + 3 || Guess == MySecretNumber + 4 || Guess == MySecretNumber + 5 ||
                 Guess == MySecretNumber - 1 || Guess == MySecretNumber - 2 || Guess == MySecretNumber - 3 || Guess == MySecretNumber -4 || Guess == MySecretNumber -5) 
             {
                 Console.WriteLine("You were 5 or less number away!");
+                Console.WriteLine($"Your guess was: {Guess}");
+
+            }
             }
 
-            if (Guess != MySecretNumber && Guess != MySecretNumber + 1 || Guess != MySecretNumber + 2 || Guess != MySecretNumber + 3 || Guess != MySecretNumber + 4 || Guess != MySecretNumber + 5 ||
-                Guess != MySecretNumber - 1 || Guess != MySecretNumber - 2 || Guess != MySecretNumber - 3 || Guess != MySecretNumber - 4 || Guess != MySecretNumber - 5)
-            {
-                Console.WriteLine("Not even close...");
-            }
-            
-            
+
+
 
         }
 

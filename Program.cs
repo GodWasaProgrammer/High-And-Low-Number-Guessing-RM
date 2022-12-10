@@ -8,16 +8,20 @@
             var go = new HighLowRandom();
             bool loop = true;
 
-            go.MySecretNumber = Winner;
+            Winner = go.MySecretNumber;
             
             
                 go.WelcomeMessage();
 
                 do
             { 
-                go.CalculateGuess(InputHandler.TakeInput());
+                int input = InputHandler.TakeInput();
+                go.CalculateGuess(input);
                 
-
+                if (input == go.MySecretNumber)
+                {
+                    loop = false;
+                }
                 
 
                
