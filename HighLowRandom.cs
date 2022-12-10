@@ -40,6 +40,16 @@ namespace High_And_Low_Number_Guessing_RM
                 Console.WriteLine($"Your guess was: {Guess}");
 
             }
+            if (Guess < MySecretNumber)
+                {
+                    Console.WriteLine("Your Guess was too low!");
+                }
+
+            if (Guess > MySecretNumber) 
+                {
+                    Console.WriteLine("Your number was too high!");
+                }
+
             }
 
 
