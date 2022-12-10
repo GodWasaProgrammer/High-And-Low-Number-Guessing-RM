@@ -8,6 +8,7 @@
         // method for taking input and returning that parsed input
         public static int TakeInput()
         {
+            Parsestate= false;
             Console.WriteLine("Take your shot!");
             // will Parse your input and will set IsParsable to True if it successfully parsed it
             bool IsParsable = Int32.TryParse(Console.ReadLine(), out int NumberGuess);
