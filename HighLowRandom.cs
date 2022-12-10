@@ -14,27 +14,32 @@
 
         }
 
-
+        // takes an int for your Guess
         public void CalculateGuess(int Guess)
         {
            
-
-            if(InputHandler.Parsestate == false)
+            // if parse failed do this
+            if(InputHandler._ParseState == false)
             {
                 Console.WriteLine("No calculation was made because you did not put in a correct number");
 
             }
-            if(InputHandler.Parsestate == true) 
+            // if parse was successful, run calculations
+
+            if(InputHandler._ParseState == true) 
             {
+                // if your guess is our secret number
                 if (Guess == MySecretNumber)
                 {
                     Console.WriteLine("You Guessed the secret number!");
                     Console.WriteLine("Thats one in a hundred! Amazing!");
 
                 }
+                // if your guess is not our secret number
                 if (Guess != MySecretNumber)
                 {
                     Console.WriteLine("Your guess was not correct");
+                    // The mother of all if's
 
                     if (Guess == MySecretNumber + 1 || Guess == MySecretNumber + 2 || Guess == MySecretNumber + 3 || Guess == MySecretNumber + 4 || Guess == MySecretNumber + 5 ||
                         Guess == MySecretNumber - 1 || Guess == MySecretNumber - 2 || Guess == MySecretNumber - 3 || Guess == MySecretNumber - 4 || Guess == MySecretNumber - 5)
@@ -43,10 +48,13 @@
                         Console.WriteLine($"Your guess was: {Guess}");
 
                     }
+                    // if guess is under our secret number
                     if (Guess < MySecretNumber)
                     {
                         Console.WriteLine("Your Guess was too low!");
                     }
+
+                    // if guess is over our secret number
 
                     if (Guess > MySecretNumber)
                     {

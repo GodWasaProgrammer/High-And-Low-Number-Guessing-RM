@@ -8,3 +8,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:High_And_Low_Number_Guessing_RM.HighLowRandom.WelcomeMessage")]
 [assembly: SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "<Pending>", Scope = "member", Target = "~M:High_And_Low_Number_Guessing_RM.HighLowRandom.CalculateGuess(System.Int32)")]
 [assembly: SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>", Scope = "member", Target = "~M:High_And_Low_Number_Guessing_RM.HighLowRandom.CalculateGuess(System.Int32)")]
+[assembly: SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "<Pending>", Scope = "member", Target = "~P:High_And_Low_Number_Guessing_RM.InputHandler._ParseState")]

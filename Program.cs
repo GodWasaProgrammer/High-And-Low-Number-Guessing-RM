@@ -2,7 +2,8 @@
 {
     public class Program
     {
-        public static int Winner; 
+         
+       
         public static void Main()
         {
 
@@ -17,7 +18,7 @@
 
             // sets winner as the secret number
 
-            Winner = go.MySecretNumber;
+           
             
             // calls our welcomemessage method
 

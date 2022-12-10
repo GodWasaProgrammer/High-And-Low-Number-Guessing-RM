@@ -4,7 +4,9 @@
 
 
     {
-        public static bool Parsestate = false;
+        // checks if parse was successful or not
+        private static bool Parsestate;
+        public static bool _ParseState { get { return Parsestate; } set { _ParseState = Parsestate; } }
 
         // method for taking input and returning that parsed input
         public static int TakeInput()
