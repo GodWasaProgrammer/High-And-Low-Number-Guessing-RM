@@ -8,6 +8,7 @@
         // method for taking input and returning that parsed input
         public static int TakeInput()
         {
+            // resets if parsestate was True the iteration before
             Parsestate= false;
             Console.WriteLine("Take your shot!");
             // will Parse your input and will set IsParsable to True if it successfully parsed it
@@ -22,12 +23,7 @@
                 Console.WriteLine("Could not be parsed");
                 Console.WriteLine("Try again");
             }
-            //  YourGuess = Console.ReadLine();
-            //   NumberGuess = int.Parse(YourGuess);
-            //if (string.IsNullOrEmpty(YourGuess))
-            //{
-            //    Console.WriteLine("You have to put a number in or you wont be be in the game.");
-            //}
+            
             return NumberGuess;
         }
     }
