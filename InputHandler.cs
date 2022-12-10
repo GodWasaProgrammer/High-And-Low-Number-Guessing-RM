@@ -4,31 +4,50 @@
 
 
     {
+        public static bool Parsestate = false;
 
-
+        // method for taking input and returning that parsed input
         public static int TakeInput()
 
         {
+
             Console.WriteLine("Take your shot!");
-            int NumberGuess;
-            string YourGuess;
+            // string YourGuess;
 
-            
-                YourGuess = Console.ReadLine();
-                NumberGuess = int.Parse(YourGuess);
-            
-            
+            // should Parse your input
+            bool IsParsable = Int32.TryParse(Console.ReadLine(), out int NumberGuess);
 
 
-                
+            // if parse succeed, set the public parsestate to true
+
+            if (IsParsable == true)
+            {
+                Parsestate = IsParsable;
+            }
+
+            else
+            {
+                Console.WriteLine("Could not be parsed");
+                Console.WriteLine("Try again");
+            }
 
 
-                if (string.IsNullOrEmpty(YourGuess))
-                {
-                    Console.WriteLine("You have to put a number in or you wont be be in the game.");
-                }
+            //  YourGuess = Console.ReadLine();
 
-                return NumberGuess;
+            //   NumberGuess = int.Parse(YourGuess);
+
+
+
+
+
+
+
+            //if (string.IsNullOrEmpty(YourGuess))
+            //{
+            //    Console.WriteLine("You have to put a number in or you wont be be in the game.");
+            //}
+
+            return NumberGuess;
 
 
             
