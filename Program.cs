@@ -2,16 +2,29 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var go = new HighLowRandom();
+            bool loop = true;
             
+            
+                go.WelcomeMessage();
 
-            go.WelcomeMessage();
-            go.CalculateGuess(InputHandler.TakeInput());
+                do
+            { 
+                go.CalculateGuess(InputHandler.TakeInput());
 
-            
-            
+                if (go.MySecretNumber == InputHandler.TakeInput())
+                {
+                    loop= false;
+                }
+            }
+                while (loop == true);
+
+
+
+
+
 
         }
     }
