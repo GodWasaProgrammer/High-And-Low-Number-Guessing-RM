@@ -12,9 +12,10 @@
         
         public void WelcomeMessage()
         {
+            Console.BackgroundColor = ConsoleColor.Green;
             Console.WriteLine("Welcome to our guessing game.");
             Console.WriteLine("input a number between 0 and 100");
-            Console.BackgroundColor = ConsoleColor.Green;
+            
             Console.WriteLine("if you guess within 5 of the Secret Number, you will be told");
         }
         // takes an int for your Guess
