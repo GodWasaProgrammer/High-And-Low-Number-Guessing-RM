@@ -4,6 +4,12 @@
     {
         // our secret number to calculate against
         public int MySecretNumber = new Random().Next(0, 100);
+
+        public void NewSecretNumber()
+        {
+            MySecretNumber = new Random().Next(0, 100);
+        }
+        
         public void WelcomeMessage()
         {
             Console.WriteLine("Welcome to our guessing game.");
@@ -14,7 +20,8 @@
         // takes an int for your Guess
         public void CalculateGuess(int Guess)
         {
-            // if parse failed do this
+            
+            
             if (InputHandler._ParseState == false)
             {
                 Console.WriteLine("No calculation was made because you did not put in a correct number");
@@ -27,6 +34,9 @@
                 {
                     Console.WriteLine("You Guessed the secret number!");
                     Console.WriteLine("Thats one in a hundred! Amazing!");
+                    NewSecretNumber();
+                    WelcomeMessage();
+
                 }
                 // if your guess is not our secret number
                 if (Guess != MySecretNumber)
@@ -49,8 +59,11 @@
                     {
                         Console.WriteLine("Your number was too high!");
                     }
+
+
                 }
             }
+            
         }
     }
 }
