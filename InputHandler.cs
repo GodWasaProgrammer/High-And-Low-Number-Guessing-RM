@@ -6,12 +6,8 @@
         private static bool Parsestate;
         public static bool _ParseState { get { return Parsestate; } set { _ParseState = Parsestate; } }
         // method for taking input and returning that parsed input
-        
         public static int TakeInput()
         {
-
-            
-
             // resets if parsestate was True the iteration before
             Parsestate = false;
             Console.WriteLine("Take your shot!");
@@ -21,18 +17,13 @@
             if (IsParsable == true)
             {
                 Parsestate = IsParsable;
-                
             }
             else
             {
                 Console.WriteLine("Could not be parsed");
                 Console.WriteLine("Try again");
             }
-            
-
                 return NumberGuess;
         }
-
-        
     }
 }

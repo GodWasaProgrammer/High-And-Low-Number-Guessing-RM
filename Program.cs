@@ -1,5 +1,4 @@
 ﻿using System.Threading.Channels;
-
 namespace High_And_Low_Number_Guessing_RM
 {
     public class Program
@@ -11,12 +10,10 @@ namespace High_And_Low_Number_Guessing_RM
             // loop controller 
             // declared true until game is done
             bool loop = true;
-
             int chances = 0;
             // sets winner as the secret number
             // calls our welcomemessage method
             go.WelcomeMessage();
-            
             // do while loop to loop our game until we done
             do
             {
@@ -24,36 +21,28 @@ namespace High_And_Low_Number_Guessing_RM
                 Chances();
                 int input = InputHandler.TakeInput();
                 go.CalculateGuess(input);
-                
                 if (InputHandler._ParseState == true)
                 { 
                 chances++;
                 }
-
             }
-
-
             // keeps loop going while loop equals true
             while (loop == true);
-
+            // chance method
              void Chances()
             {
                 if (chances < 5)
                 {
                     Console.WriteLine($"Your Current amount of chances spent:{chances} out of 5");
-
-                    
                 }
                 if (chances == 5)
                 {
-
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine($"Your Current amount of chances spent:{chances} out of 5 ");
                     Console.WriteLine("You have lost!");
                     chances = 0;
                     go.NewSecretNumber();
                     go.WelcomeMessage();
-
                 }
             }
             // prints the winning number
