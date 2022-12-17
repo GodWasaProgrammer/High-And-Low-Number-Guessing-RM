@@ -7,7 +7,6 @@ namespace High_And_Low_Number_Guessing_RM
         {
             // Secret number
             var MySecretNumber = new Random().Next(0, 100);
-            Console.WriteLine($"our secret number{MySecretNumber}");
             int MaxValue = MySecretNumber + 5;
             int MinValue = MySecretNumber - 5;
             string MyGuess;
