@@ -51,7 +51,9 @@ namespace High_And_Low_Number_Guessing_RM
                             {
                                 Console.WriteLine("Way off... too high.");
                             }
+
                         }
+
                         // if my guess is below the minvalue AND below mysecretnumber
                         if (myGuessasInt > minValue && myGuessasInt < mySecretNumber)
                         {
@@ -62,7 +64,9 @@ namespace High_And_Low_Number_Guessing_RM
                             {
                                 Console.WriteLine("Way off..too low!");
                             }
+
                         }
+
                         // if you run out of chances
                         if (chances == 0)
                         {
@@ -71,6 +75,7 @@ namespace High_And_Low_Number_Guessing_RM
                             // Kills the Game
                             chances = -1;
                         }
+
                         // if you win
                         if (myGuessasInt == mySecretNumber)
                         {
@@ -79,9 +84,12 @@ namespace High_And_Low_Number_Guessing_RM
                             // sets chances to 0, And restarts the game
                             chances = 0;
                         }
+
                     }
                     while (isParsable == false);
+
                 } while (chances > 0);
+
             } while (chances > -1);
         }
     }
